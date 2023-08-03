@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ac/wc-display-products",
+	"title": "WC Display Products",
+	"textdomain": "dpuk-ac",
+	"icon": "block-default",
+	"category": "DPUK",
+	"version": "1.0.0",
+	"keywords": [ "DPUK", "WooCommerce", "Angry Creative" ],
+	"attributes": {
+		"productSectionTitle": {
+			"type": "string"
+		},		
+		"numberOfProducts": {
+			"type": "string"
+		}
+	},
+	"example": {},
+	"editorScript": "file:../../../build/wc-display-products.js",
+	"editorStyle": "file:../../../build/wc-display-products.css"
+}
