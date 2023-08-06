@@ -15,7 +15,7 @@ A block to display WooCommerce Products
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation-&-configuration">Installation</a></li>
-        <li><a href="#usage">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
       </ul>
     </li>
     <li><a href="#future-updates">Future Updates</a></li>
@@ -37,6 +37,11 @@ A block to display WooCommerce Products
 ### Installation & Configuration
 
 * Download the zip file and install it like any other WordPress plugin or clone this repo into your WordPress installation into the wp-content/plugins folder.
+* Run `npm install` to pull all the packages.
+* Run `composer install` to bring in php dependencies.
+* Run `npm run build` to compile the block.
+* Run `gulp comileSass` to compile the css.
+
 
 ### Usage
 
