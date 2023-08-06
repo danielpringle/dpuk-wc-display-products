@@ -13,7 +13,8 @@
 			"type": "string"
 		},		
 		"numberOfProducts": {
-			"type": "string"
+            "type": "integer",
+            "default": 3
 		}
 	},
 	"example": {},

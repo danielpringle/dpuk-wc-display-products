@@ -14,3 +14,4 @@ Types of changes
 * Security in case of vulnerabilities.
 
 ## [1.0.0] - 2023-08-01
+Project started

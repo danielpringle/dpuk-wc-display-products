@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Register plugin classes
  *
@@ -13,8 +14,8 @@
 namespace DPUK_AC;
 
 // Restrict direct access.
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
+if (! defined('ABSPATH')) {
+    die;
 }
 
 /**
@@ -25,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  * @var   string Defines the class file path.
  */
-define( 'DPUKAC_CLASS', DPUKAC_PATH . 'includes/classes/class-' );
+define('DPUKAC_CLASS', DPUKAC_PATH . 'includes/classes/class-');
 
 /**
  * Array of classes to register
@@ -33,11 +34,11 @@ define( 'DPUKAC_CLASS', DPUKAC_PATH . 'includes/classes/class-' );
  * @since 1.0.0
  * @var   array Defines an array of class files to register.
  */
-define( 'DPUKAC_CLASSES', [
-	__NAMESPACE__ . '\Classes\AssetVersioning'          => DPUKAC_CLASS . 'asset-versioning.php',
+define('DPUKAC_CLASSES', [
+    __NAMESPACE__ . '\Classes\AssetVersioning'          => DPUKAC_CLASS . 'asset-versioning.php',
     __NAMESPACE__ . '\Classes\EnqueueAssets'            => DPUKAC_CLASS . 'enqueue-assets.php',
 
-] );
+]);
 
 /**
  * Autoload class files
@@ -47,9 +48,9 @@ define( 'DPUKAC_CLASSES', [
  * @return void
  */
 spl_autoload_register(
-	function ( string $class ) {
-		if ( isset( DPUKAC_CLASSES[ $class ] ) ) {
-			require DPUKAC_CLASSES[ $class ];
-		}
-	}
+    function (string $class) {
+        if (isset(DPUKAC_CLASSES[ $class ])) {
+            require DPUKAC_CLASSES[ $class ];
+        }
+    }
 );

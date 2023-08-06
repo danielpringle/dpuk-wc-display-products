@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Initialize plugin functionality
  *
@@ -18,12 +19,12 @@ use DPUK_AC\Classes as Classes;
 use DPUK_AC\Admin as Admin;
 
 // Restrict direct access.
-if ( ! defined( 'ABSPATH' ) ) {
-	die;
+if (! defined('ABSPATH')) {
+    die;
 }
 
 // Hook initialization functions.
-add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
+add_action('plugins_loaded', __NAMESPACE__ . '\init');
 //add_action( 'plugins_loaded', __NAMESPACE__ . '\admin_init' );
 
 
@@ -38,31 +39,32 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\init' );
  * @access public
  * @return void
  */
-function init() {
+function init()
+{
 
-	// Load plugin text domain.
-	load_plugin_textdomain(
-		'dpuk-ac',
-		false,
-		dirname( DPUKAC_BASENAME ) . '/languages'
-	);
+    // Load plugin text domain.
+    load_plugin_textdomain(
+        'dpuk-ac',
+        false,
+        dirname(DPUKAC_BASENAME) . '/languages'
+    );
 
-	// If this is in the must-use plugins directory.
-	load_muplugin_textdomain(
-		'dpuk-ac',
-		dirname( DPUKAC_BASENAME ) . '/languages'
-	);
+    // If this is in the must-use plugins directory.
+    load_muplugin_textdomain(
+        'dpuk-ac',
+        dirname(DPUKAC_BASENAME) . '/languages'
+    );
 
-	/**
-	 * Class autoloader
-	 *
-	 * The autoloader registers plugin classes for later use,
-	 * such as running new instances below.
-	 */
-	require_once DPUKAC_PATH . 'includes/autoloader.php';
+    /**
+     * Class autoloader
+     *
+     * The autoloader registers plugin classes for later use,
+     * such as running new instances below.
+     */
+    require_once DPUKAC_PATH . 'includes/autoloader.php';
 
-	// Settings and core methods.
-	new Classes\EnqueueAssets;
+    // Settings and core methods.
+    new Classes\EnqueueAssets();
 }
 
 /**
@@ -75,6 +77,6 @@ function init() {
  * @global $pagenow Get the current admin screen.
  * @return void
  */
-function admin_init() {
-
+function admin_init()
+{
 }

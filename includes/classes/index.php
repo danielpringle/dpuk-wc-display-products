@@ -1,1 +1,3 @@
-<?php // Security file.
+<?php
+
+// Security file.
