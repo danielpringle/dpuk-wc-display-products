@@ -58,7 +58,7 @@ A block to display WooCommerce Products
 * Daniel Pringle 
 
 ## Version History
-[a relative link](CHANGELOG.md)
+[See the changelog file](CHANGELOG.md)
 
 ## License
 
